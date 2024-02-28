@@ -2,7 +2,7 @@
 name = "sealed-secrets"
 description = "A simple Rust lib to encrypt and decrypt secrets using Sealed Secrets"
 license = "GPL-3.0"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2021"
 include = [
     "**/*.rs",
