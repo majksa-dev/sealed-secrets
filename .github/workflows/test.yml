@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Cache
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: grcov
           path: ~/.cargo/bin/grcov
@@ -50,7 +50,7 @@ jobs:
           RUSTFLAGS: "-C instrument-coverage"
           LLVM_PROFILE_FILE: "report-%p-%m.profraw"
       - name: Get cached grcov
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: grcov
           path: ~/.cargo/bin/grcov
