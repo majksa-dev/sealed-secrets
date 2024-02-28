@@ -75,7 +75,6 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: ${{ github.repository }}
-          file: target/coverage/$cov_id.lcov
   check-fmt:
     name: Check code formatting
     runs-on: ubuntu-latest
