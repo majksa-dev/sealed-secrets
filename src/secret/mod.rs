@@ -43,7 +43,6 @@ impl LoadFromString<SecretsManager> for SecretsManager {
     }
 }
 
-
 pub fn encode(map: &HashMap<String, String>, key: &String) -> Result<String, Error> {
     let vault_pass = KeySource::Password(key.as_str());
     let mut sman = SecretsManager::new(vault_pass).unwrap();
@@ -53,8 +52,7 @@ pub fn encode(map: &HashMap<String, String>, key: &String) -> Result<String, Err
     sman.save_as_string()
 }
 
-
-pub fn decode(encoded: &String, key: &String) -> Result<HashMap<String,String>, Error> {
+pub fn decode(encoded: &String, key: &String) -> Result<HashMap<String, String>, Error> {
     let vault_pass = KeySource::Password(key.as_str());
     let sman = SecretsManager::load_from_string(encoded, vault_pass)?;
     let mut map = HashMap::new();
@@ -63,7 +61,6 @@ pub fn decode(encoded: &String, key: &String) -> Result<HashMap<String,String>, 
     }
     Ok(map)
 }
-
 
 #[cfg(test)]
 mod tests {
