@@ -1,6 +1,6 @@
+use std::env::temp_dir;
 use std::fs;
 use std::path::PathBuf;
-use std::env::temp_dir;
 
 use securestore::{Error, KeySource, SecretsManager};
 use uuid::Uuid;
