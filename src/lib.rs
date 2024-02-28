@@ -1,3 +1,35 @@
+//! This module provides functions and traits for saving and loading secrets as strings.
+//! It includes implementations for saving and loading secrets using the `SecretsManager` struct.
+//!
+//! # Examples
+//!
+//! Saving secrets as a string:
+//!
+//! ```
+//! use sealed_secrets::encode;
+//!
+//! fn main() {
+//!     let mut map = HashMap::new();
+//!     map.insert("key1".to_string(), "value1".to_string());
+//!     map.insert("key2".to_string(), "value2".to_string());
+//!     let key = "password".to_string();
+//!     let encoded = encode(&map, &key).unwrap();
+//!     println!("{}", encoded);
+//! }
+//! ```
+//!
+//! Loading secrets from a string:
+//!
+//! ```
+//! use sealed_secrets::decode;
+//!
+//! fn main() {
+//!     let encoded = r#"...encoded string..."#.to_string();
+//!     let key = "password".to_string();
+//!     let map = decode(&encoded, &key).unwrap();
+//!     println!("{:?}", map);
+//! }
+//! ```
 mod io;
 
 use std::collections::HashMap;
