@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/majksa-dev/sealed-secrets/compare/v0.1.0...v0.2.0) (2024-02-28)
+
+
+### Features
+
+* add code documentation ([ed23ef2](https://github.com/majksa-dev/sealed-secrets/commit/ed23ef2747f07b9c309142eabf1452a76779f951))
+
 ## 0.1.0 (2024-02-28)
 
 
