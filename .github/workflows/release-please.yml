@@ -1,0 +1,17 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    uses: majksa-actions/workflows/.github/workflows/release-please.yml@v1
+    secrets: inherit
+    with:
+      release-type: "rust"
