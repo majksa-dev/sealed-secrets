@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/majksa-dev/sealed-secrets/compare/v0.2.0...v0.2.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* failing test inside docs ([fb61e94](https://github.com/majksa-dev/sealed-secrets/commit/fb61e940520776e68cf6444775e35b9d3ec68450))
+
 ## [0.2.0](https://github.com/majksa-dev/sealed-secrets/compare/v0.1.0...v0.2.0) (2024-02-28)
 
 
