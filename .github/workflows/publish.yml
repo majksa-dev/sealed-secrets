@@ -11,4 +11,5 @@ permissions:
 jobs:
   cargo:
     uses: majksa-actions/workflows/.github/workflows/rust-publish.yml@v1
-    secrets: inherit
+    secrets:
+      CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
