@@ -61,14 +61,17 @@ jobs:
       - name: Name of coverage file (part 2)
         if: ${{ matrix.features }}
         run: echo cov_id="$cov_id"-'${{ matrix.features }}' >> $GITHUB_ENV
+      - name: Name of coverage file
+        id: coverage-name
+        run: echo cov_id="$cov_id" >> "$GITHUB_OUTPUT"
       - name: Convert coverage
         run: |
           mkdir -p target/coverage
-          grcov . --binary-path target/debug/deps/ -s . -t lcov --branch --ignore-not-existing --ignore '../**' --ignore '/*' -o "target/coverage/$cov_id.lcov"
+          grcov . --binary-path target/debug/deps/ -s . -t lcov --branch --ignore-not-existing --ignore '../**' --ignore '/*' -o "target/coverage/${{ steps.coverage-name.outputs.cov_id }}.lcov"
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-$cov_id
+          name: coverage-${{ steps.coverage-name.outputs.cov_id }}
           path: target/coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4
