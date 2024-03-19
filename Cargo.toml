@@ -13,4 +13,4 @@ include = [
 
 [dependencies]
 securestore = "0.100.0"
-uuid = { version = "1.7.0", features = ["serde", "v4"] }
+uuid = { version = "1.8.0", features = ["serde", "v4"] }
